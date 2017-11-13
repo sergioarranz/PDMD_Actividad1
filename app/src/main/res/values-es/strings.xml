@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PDMD_Actividad1</string>
+    <!-- Botones -->
+    <string name="btnNext">Siguiente</string>
+    <string name="btnEdit">Editar</string>
+    <!-- Labels -->
+    <string name="lblName">Nombre</string>
+    <string name="lblEmail">Email</string>
+    <string name="lblPhone">Telefono</string>
+    <string name="lblAddr">Direccion</string>
+    <string name="lblRegDate">Fecha inscripcion</string>
+</resources>
