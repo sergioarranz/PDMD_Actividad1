@@ -4,6 +4,8 @@
     <!-- Botones -->
     <string name="btnNext">Siguiente</string>
     <string name="btnEdit">Editar</string>
+    <string name="btnSave">Guardar</string>
+    <string name="btnCancel">Cancelar</string>
     <!-- Labels -->
     <string name="lblName">Nombre</string>
     <string name="lblEmail">Email</string>
