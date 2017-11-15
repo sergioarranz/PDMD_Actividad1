@@ -7,6 +7,7 @@ import java.util.Calendar;
  */
 
 public class DataHolder {
+
     static public DataHolder Instance = new DataHolder();
     final Calendar c = Calendar.getInstance();
 
@@ -14,7 +15,6 @@ public class DataHolder {
     public String email="";
     public String addr="";
     public String phone="";
-    public String date="";
     public int yy=c.get(Calendar.YEAR);
     public int mm=c.get(Calendar.MONTH);
     public int dd=c.get(Calendar.DAY_OF_MONTH);

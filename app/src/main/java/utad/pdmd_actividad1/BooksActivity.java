@@ -6,20 +6,29 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * Created by sergio on 15/11/17.
+ */
+
 public class BooksActivity extends AppCompatActivity {
 
-    private BooksActivityEvents events;
+
     public Button btnProfile, btnPrev, btnBNext;
     public TextView lblTitle, lblText;
     public EditText txtTitle, txtText;
     public String[] TitlesArray, TextsArray;
+    private BooksActivityEvents events;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_books);
         events = new BooksActivityEvents(this);
+
+        // Arrays
         TitlesArray = getResources().getStringArray(R.array.titles);
         TextsArray = getResources().getStringArray(R.array.texts);
+
         // Buttons
         btnProfile = this.findViewById(R.id.btnProfile);
         btnPrev = this.findViewById(R.id.btnPrev);
@@ -30,8 +39,7 @@ public class BooksActivity extends AppCompatActivity {
         btnPrev.setText(R.string.btnPrev);
         btnBNext.setText(R.string.btnBNext);
 
-
-        // Labels
+        // TextViews
         lblTitle = this.findViewById(R.id.lblTitle);
         lblText = this.findViewById(R.id.lblText);
 
@@ -39,18 +47,17 @@ public class BooksActivity extends AppCompatActivity {
         lblText.setText(R.string.lblText);
 
         // EditTexts
-
         txtTitle = this.findViewById(R.id.txtTitle);
         txtText = this.findViewById(R.id.txtText);
 
         txtTitle.setText(TitlesArray[0]);
         txtText.setText(TextsArray[0]);
+
         // Listeners
         btnProfile.setOnClickListener(events);
         btnPrev.setOnClickListener(events);
         btnBNext.setOnClickListener(events);
 
-        // Arrays
 
 
     }
