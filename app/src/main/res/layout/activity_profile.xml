@@ -168,7 +168,7 @@
                     android:id="@+id/regDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:calendarViewShown="false" />
+                    android:calendarViewShown="false"/>
             </LinearLayout>
 
         </LinearLayout>
