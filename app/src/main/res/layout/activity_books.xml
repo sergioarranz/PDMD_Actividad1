@@ -6,78 +6,102 @@
     android:layout_height="match_parent"
     tools:context="utad.pdmd_actividad1.BooksActivity">
 
-    <Button
-        android:id="@+id/btnProfile"
-        android:layout_width="109dp"
-        android:layout_height="49dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="8dp"
-        android:text="perfil"
-        app:layout_constraintBottom_toTopOf="@+id/txtTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.067"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.32" />
-
-    <TextView
-        android:id="@+id/lblTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Titulo"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="64dp" />
-
-    <EditText
-        android:id="@+id/txtTitle"
-        android:layout_width="285dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:fontFamily="sans-serif"
-        android:inputType="textPersonName"
-        android:text="Nombre"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="83dp" />
-
-    <TextView
-        android:id="@+id/lblText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Texto"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="127dp" />
-
     <ScrollView
-        android:layout_width="286dp"
-        android:layout_height="208dp"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="145dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/txtText"
+        <LinearLayout
+            android:id="@+id/VgridBooks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:fontFamily="sans-serif-condensed"
-            android:inputType="textMultiLine"
-            android:text="Lorem Ipsum"
-            android:textSize="14sp" />
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnProfile"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="perfil"
+                tools:layout_editor_absoluteX="12dp"
+                tools:layout_editor_absoluteY="7dp" />
+
+            <TextView
+                android:id="@+id/lblTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Titulo"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="55dp" />
+
+            <EditText
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:fontFamily="sans-serif"
+                android:inputType="textPersonName"
+                android:text="Nombre"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="18dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+            <TextView
+                android:id="@+id/lblText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Texto"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="127dp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/gridText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/txtText"
+                        android:layout_width="match_parent"
+                        android:layout_height="208dp"
+                        android:ems="10"
+                        android:fontFamily="sans-serif-condensed"
+                        android:inputType="textMultiLine"
+                        android:text="Lorem Ipsum"
+                        android:textSize="14sp"
+                        tools:layout_editor_absoluteX="18dp"
+                        tools:layout_editor_absoluteY="155dp" />
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/gridBtns"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnPrev"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="anterior"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="370dp" />
+
+                <Button
+                    android:id="@+id/btnBNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="siguiente"
+                    tools:layout_editor_absoluteX="167dp"
+                    tools:layout_editor_absoluteY="371dp" />
+            </LinearLayout>
+
+        </LinearLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/btnPrev"
-        android:layout_width="149dp"
-        android:layout_height="37dp"
-        android:text="anterior"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="370dp" />
-
-    <Button
-        android:id="@+id/btnBNext"
-        android:layout_width="136dp"
-        android:layout_height="37dp"
-        android:text="siguiente"
-        tools:layout_editor_absoluteX="167dp"
-        tools:layout_editor_absoluteY="371dp" />
 </android.support.constraint.ConstraintLayout>

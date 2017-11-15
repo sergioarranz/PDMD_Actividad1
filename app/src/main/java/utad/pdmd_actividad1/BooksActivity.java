@@ -39,5 +39,10 @@ public class BooksActivity extends AppCompatActivity {
 
         txtTitle = this.findViewById(R.id.txtTitle);
         txtText = this.findViewById(R.id.txtText);
+
+        // Listeners
+        btnProfile.setOnClickListener(events);
+        btnPrev.setOnClickListener(events);
+        btnBNext.setOnClickListener(events);
     }
 }
