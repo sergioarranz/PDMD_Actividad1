@@ -6,20 +6,25 @@ import android.view.View;
 public class BooksActivityEvents implements View.OnClickListener {
 
     private BooksActivity booksActivity;
-    private int aux = 0;
+    private int aux; // Index aux var for Arrays
 
     public BooksActivityEvents(BooksActivity booksActivity){
         this.booksActivity = booksActivity;
-
+        aux=0;
     }
+
     @Override
     public void onClick(View view) {
 
+        // Profile Button
         if (view.getId() == R.id.btnProfile){
             Intent intent = new Intent(booksActivity, ProfileActivity.class);
             booksActivity.startActivity(intent);
             booksActivity.finish();
-        } else if (view.getId() == R.id.btnBNext){
+        }
+        // Next Button
+        else if (view.getId() == R.id.btnBNext){
+            // Check prev button enabled for a real UX pagination
             if(!booksActivity.btnPrev.isEnabled()){
                 booksActivity.btnPrev.setEnabled(true);
             }

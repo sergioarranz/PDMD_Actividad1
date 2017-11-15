@@ -29,7 +29,7 @@ public class ProfileActivity extends AppCompatActivity {
         btnNext.setText(R.string.btnNext);
         btnEdit.setText(R.string.btnEdit);
 
-        // Labels
+        // TextViews
         lblName = this.findViewById(R.id.lblName);
         lblEmail = this.findViewById(R.id.lblEmail);
         lblPhone = this.findViewById(R.id.lblPhone);
@@ -54,7 +54,6 @@ public class ProfileActivity extends AppCompatActivity {
         txtPhone.setText(DataHolder.Instance.phone);
         txtAddr.setText(DataHolder.Instance.addr);
         regDate.updateDate(DataHolder.Instance.yy, DataHolder.Instance.mm, DataHolder.Instance.dd);
-
 
         // Listeners
         btnNext.setOnClickListener(events);
