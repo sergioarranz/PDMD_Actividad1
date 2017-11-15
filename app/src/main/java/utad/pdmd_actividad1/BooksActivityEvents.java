@@ -1,7 +1,6 @@
 package utad.pdmd_actividad1;
 
 import android.content.Intent;
-import android.util.Log;
 import android.view.View;
 
 public class BooksActivityEvents implements View.OnClickListener {
@@ -20,12 +19,6 @@ public class BooksActivityEvents implements View.OnClickListener {
             Intent intent = new Intent(booksActivity, ProfileActivity.class);
             booksActivity.startActivity(intent);
             booksActivity.finish();
-
-
-
-
-
-
         } else if (view.getId() == R.id.btnBNext){
             if(!booksActivity.btnPrev.isEnabled()){
                 booksActivity.btnPrev.setEnabled(true);
@@ -33,13 +26,11 @@ public class BooksActivityEvents implements View.OnClickListener {
             if (aux < booksActivity.TitlesArray.length-1){
                 aux++;
                 booksActivity.txtTitle.setText(booksActivity.TitlesArray[aux]);
-                Log.v("sdddsf", "length:"+booksActivity.TitlesArray.length);
-                Log.v("sdfsdf", "aux:"+aux);
+                booksActivity.txtText.setText(booksActivity.TextsArray[aux]);
                 if (aux == booksActivity.TitlesArray.length-1) {
                     booksActivity.btnBNext.setEnabled(false);
                 }
             }
-
         } else if (view.getId() == R.id.btnPrev){
             if(!booksActivity.btnBNext.isEnabled()){
                 booksActivity.btnBNext.setEnabled(true);
@@ -47,6 +38,7 @@ public class BooksActivityEvents implements View.OnClickListener {
             if( aux>0 && aux < booksActivity.TitlesArray.length){
                 aux--;
                 booksActivity.txtTitle.setText(booksActivity.TitlesArray[aux]);
+                booksActivity.txtText.setText(booksActivity.TextsArray[aux]);
                 if (aux == 0) {
                     booksActivity.btnPrev.setEnabled(false);
                 }
