@@ -20,20 +20,36 @@ public class BooksActivityEvents implements View.OnClickListener {
             Intent intent = new Intent(booksActivity, ProfileActivity.class);
             booksActivity.startActivity(intent);
             booksActivity.finish();
+
+
+
+
+
+
         } else if (view.getId() == R.id.btnBNext){
-            if ( aux>=0 && aux < booksActivity.TitlesArray.length-1){
+            if(!booksActivity.btnPrev.isEnabled()){
+                booksActivity.btnPrev.setEnabled(true);
+            }
+            if (aux < booksActivity.TitlesArray.length-1){
                 aux++;
                 booksActivity.txtTitle.setText(booksActivity.TitlesArray[aux]);
-            } else {
-                booksActivity.btnBNext.setEnabled(false);
+                Log.v("sdddsf", "length:"+booksActivity.TitlesArray.length);
+                Log.v("sdfsdf", "aux:"+aux);
+                if (aux == booksActivity.TitlesArray.length-1) {
+                    booksActivity.btnBNext.setEnabled(false);
+                }
             }
+
         } else if (view.getId() == R.id.btnPrev){
-            if( aux>0 && aux < booksActivity.TitlesArray.length-1){
+            if(!booksActivity.btnBNext.isEnabled()){
+                booksActivity.btnBNext.setEnabled(true);
+            }
+            if( aux>0 && aux < booksActivity.TitlesArray.length){
                 aux--;
                 booksActivity.txtTitle.setText(booksActivity.TitlesArray[aux]);
-
-            } else {
-                booksActivity.btnPrev.setEnabled(false);
+                if (aux == 0) {
+                    booksActivity.btnPrev.setEnabled(false);
+                }
             }
         }
     }
