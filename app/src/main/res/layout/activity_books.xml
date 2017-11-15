@@ -8,11 +8,17 @@
 
     <Button
         android:id="@+id/btnProfile"
-        android:layout_width="85dp"
-        android:layout_height="wrap_content"
+        android:layout_width="109dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp"
         android:text="perfil"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@+id/txtTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32" />
 
     <TextView
         android:id="@+id/lblTitle"
@@ -68,7 +74,7 @@
         tools:layout_editor_absoluteY="370dp" />
 
     <Button
-        android:id="@+id/btnNext"
+        android:id="@+id/btnBNext"
         android:layout_width="136dp"
         android:layout_height="37dp"
         android:text="siguiente"

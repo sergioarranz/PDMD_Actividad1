@@ -1,20 +1,15 @@
 package utad.pdmd_actividad1;
 
-import android.app.AlertDialog;
 import android.content.Intent;
-import android.provider.ContactsContract;
-import android.util.Log;
 import android.view.View;
 
 public class ProfileActivityEvents implements View.OnClickListener {
 
     private ProfileActivity profileActivity;
-    private AlertDialog.Builder alertDialog;
     private boolean isEditing;
 
     public ProfileActivityEvents(ProfileActivity profileActivity){
         this.profileActivity = profileActivity;
-
     }
 
     @Override

@@ -6,10 +6,15 @@
     <string name="btnEdit">Editar</string>
     <string name="btnSave">Guardar</string>
     <string name="btnCancel">Cancelar</string>
+    <string name="btnProfile">Perfil</string>
+    <string name="btnPrev">Anterior</string>
+    <string name="btnBNext">Siguiente</string>
     <!-- Labels -->
     <string name="lblName">Nombre</string>
     <string name="lblEmail">Email</string>
     <string name="lblPhone">Telefono</string>
     <string name="lblAddr">Direccion</string>
     <string name="lblRegDate">Fecha inscripcion</string>
+    <string name="lblTitle">Titulo</string>
+    <string name="lblText">Texto</string>
 </resources>
