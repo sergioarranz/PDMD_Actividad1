@@ -23,11 +23,11 @@ public class BooksActivityEvents implements View.OnClickListener {
             if(!booksActivity.btnPrev.isEnabled()){
                 booksActivity.btnPrev.setEnabled(true);
             }
-            if (aux < booksActivity.TitlesArray.length-1){
+            if (aux < booksActivity.TitlesArray.length-1 || aux < booksActivity.TextsArray.length-1){
                 aux++;
                 booksActivity.txtTitle.setText(booksActivity.TitlesArray[aux]);
                 booksActivity.txtText.setText(booksActivity.TextsArray[aux]);
-                if (aux == booksActivity.TitlesArray.length-1) {
+                if (aux == booksActivity.TitlesArray.length-1 || aux == booksActivity.TextsArray.length-1) {
                     booksActivity.btnBNext.setEnabled(false);
                 }
             }
@@ -35,7 +35,7 @@ public class BooksActivityEvents implements View.OnClickListener {
             if(!booksActivity.btnBNext.isEnabled()){
                 booksActivity.btnBNext.setEnabled(true);
             }
-            if( aux>0 && aux < booksActivity.TitlesArray.length){
+            if( aux>0 && aux < booksActivity.TitlesArray.length || aux < booksActivity.TextsArray.length){
                 aux--;
                 booksActivity.txtTitle.setText(booksActivity.TitlesArray[aux]);
                 booksActivity.txtText.setText(booksActivity.TextsArray[aux]);
