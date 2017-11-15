@@ -12,15 +12,18 @@ public class BooksActivity extends AppCompatActivity {
     public Button btnProfile, btnPrev, btnBNext;
     public TextView lblTitle, lblText;
     public EditText txtTitle, txtText;
+    public String[] TitlesArray, TextsArray;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_books);
         events = new BooksActivityEvents(this);
-
+        TitlesArray = getResources().getStringArray(R.array.titles);
+        TextsArray = getResources().getStringArray(R.array.texts);
         // Buttons
         btnProfile = this.findViewById(R.id.btnProfile);
         btnPrev = this.findViewById(R.id.btnPrev);
+        btnPrev.setEnabled(false);
         btnBNext = this.findViewById(R.id.btnBNext);
 
         btnProfile.setText(R.string.btnProfile);
@@ -40,9 +43,15 @@ public class BooksActivity extends AppCompatActivity {
         txtTitle = this.findViewById(R.id.txtTitle);
         txtText = this.findViewById(R.id.txtText);
 
+        txtTitle.setText(TitlesArray[0]);
+        txtText.setText(TextsArray[0]);
         // Listeners
         btnProfile.setOnClickListener(events);
         btnPrev.setOnClickListener(events);
         btnBNext.setOnClickListener(events);
+
+        // Arrays
+
+
     }
 }

@@ -17,4 +17,22 @@
     <string name="lblRegDate">Fecha inscripcion</string>
     <string name="lblTitle">Titulo</string>
     <string name="lblText">Texto</string>
+    <!-- Arrays -->
+    <string-array name="titles">
+        <item>A</item>
+        <item>Almak</item>
+        <item>Anlamak</item>
+        <item>Anlasmak</item>
+        <item>Anlatmak</item>
+        <item>Ayrilmak</item>
+    </string-array>
+
+    <string-array name="texts">
+        <item>A</item>
+        <item>Almak</item>
+        <item>Anlamak</item>
+        <item>Anlasmak</item>
+        <item>Anlatmak</item>
+        <item>Ayrilmak</item>
+    </string-array>
 </resources>
