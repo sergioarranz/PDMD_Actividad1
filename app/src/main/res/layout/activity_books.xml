@@ -42,17 +42,22 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="127dp" />
 
-    <EditText
-        android:id="@+id/txtText"
-        android:layout_width="292dp"
-        android:layout_height="217dp"
-        android:ems="10"
-        android:fontFamily="sans-serif-condensed"
-        android:inputType="textMultiLine"
-        android:text="Lorem ipsum"
-        android:textSize="14sp"
-        tools:layout_editor_absoluteX="14dp"
-        tools:layout_editor_absoluteY="155dp" />
+    <ScrollView
+        android:layout_width="286dp"
+        android:layout_height="208dp"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="145dp">
+
+        <EditText
+            android:id="@+id/txtText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="textMultiLine"
+            android:text="Lorem Ipsum"
+            android:textSize="14sp" />
+    </ScrollView>
 
     <Button
         android:id="@+id/btnPrev"
